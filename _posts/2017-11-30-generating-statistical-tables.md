@@ -76,7 +76,7 @@ The result of the tex file is the following:
 
 I did some modifications to get a better table, and I created using tikz a figure to explain what the table is showing. The code of the figure is the following:
 
-{% highlight javascript linenos %}
+{% highlight latex linenos %}
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}[scale=0.6]
