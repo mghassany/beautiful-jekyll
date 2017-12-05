@@ -73,6 +73,7 @@ The result of the tex file is the following:
 \end{table}
 ```
 
+
 I did some modifications to get a better table, and I created using tikz a figure to explain what the table is showing. The code of the figure is the following:
 
 ```latex

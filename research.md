@@ -3,8 +3,11 @@ title: Research
 layout: page
 ---
 
+## Table of contents
+
 * Do not remove this line (it will not be displayed)
 {:toc}
+
 
 ## Projects
 
