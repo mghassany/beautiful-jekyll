@@ -9,22 +9,22 @@ Inspired from Arthur Charpentier's [blog post](http://freakonometrics.hypotheses
 
 First tables show the values of $$\Phi$$, which are the values of the cumulative distribution function of the normal distribution.
 
-```r
+{% highlight r linenos %}
 u=seq(0,3.09,by=0.01)
 p=pnorm(u)
 m=matrix(p,ncol=10,byrow=TRUE)
 options(digits=4)
 rownames(m)=seq(0,3,b=.1)
 colnames(m)=seq(0,.09,by=.01)
-```
+{% endhighlight %}
 
 Then to export it into latex format:
 
-```r
+{% highlight r linenos %}
 library(xtable)
 newm=xtable(m,digits=4)
 print.xtable(newm, type="latex", file="nor1.tex")
-```
+{% endhighlight %}
 
 The result of the tex file is the following: 
 
@@ -123,7 +123,7 @@ Here is a screen capture of the generated table
 
 This table gives $$u_{\alpha}$$ with respect to the value of $$\alpha$$.
 
-```r
+{% highlight r linenos %}
 u=seq(0,0.99,by=0.01)
 p=qnorm(1-u/2)
 m=matrix(p,ncol=10,byrow=TRUE)
@@ -133,7 +133,7 @@ colnames(m)=seq(0,.09,by=.01)
 # library(xtable)
 newm=xtable(m,digits=4)
 print.xtable(newm, type="latex", file="nor2.tex")
-```
+{% endhighlight %}
 
 Here is the result from the generated pdf, including the figure explaining what the table shows
 
@@ -141,7 +141,7 @@ Here is the result from the generated pdf, including the figure explaining what 
 
 The latex code to create the figure is 
 
-```latex
+{% highlight latex linenos %}
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}[scale=0.6]
@@ -184,14 +184,14 @@ height=6cm,
 
 \end{tikzpicture}
 \end{figure}
-```
+{% endhighlight %}
 
 
 ### Student table
 
 The R code:
 
-```r
+{% highlight r linenos %}
 n=seq(1,10,by=1)
 alpha = c(0.5,0.4,0.3,0.2,0.1,0.05,0.02,0.01,0.001)
 mt=matrix(0,nrow=10,ncol=9,byrow=TRUE)
@@ -208,7 +208,7 @@ colnames(mt)=alpha
 library(xtable)
 mt2=xtable(m,digits=4)
 print.xtable(mt2, type="latex", file="student.tex")
-```
+{% endhighlight %}
 
 The screen capture of the generated table from the pdf file
 
@@ -217,7 +217,7 @@ The screen capture of the generated table from the pdf file
 And here is the latex code for the figure of the student distribution
 
 
-```latex
+{% highlight latex linenos %}
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}[scale=0.5]
@@ -252,7 +252,7 @@ height=6cm,
 
 \end{tikzpicture}
 \end{figure}
-```
+{% endhighlight %}
 
 
 
