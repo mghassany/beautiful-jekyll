@@ -28,7 +28,7 @@ print.xtable(newm, type="latex", file="nor1.tex")
 
 The result of the tex file is the following: 
 
-{% highlight latex linenos %}
+```latex
 % latex table generated in R 3.4.1 by xtable 1.8-2 package
 % Thu Nov 30 15:10:28 2017
 \begin{table}[ht]
@@ -71,7 +71,7 @@ The result of the tex file is the following:
    \hline
 \end{tabular}
 \end{table}
-{% endhighlight %}
+```
 
 
 I did some modifications to get a better table, and I created using tikz a figure to explain what the table is showing. The code of the figure is the following:
